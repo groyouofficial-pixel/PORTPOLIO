@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 
 const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength, containerRef }) => {

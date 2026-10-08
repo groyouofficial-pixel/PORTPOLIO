@@ -1,4 +1,3 @@
-import React from 'react';
 import stackImage from '../assets/about/image.png';
 import reactImage from '../assets/about/react.png';
 import nodeImage from '../assets/about/node.png';
@@ -90,12 +89,24 @@ const About = () => {
           </div>
 
           {/* Horizontal Skills Badges */}
-          <div id="skills" className="flex flex-wrap items-center gap-3 pt-4 border-t border-white/20">
-            {['Digital Marketing', 'Brand Strategy', 'Google Ads', 'Meta Ads', 'Shopify E-commerce', 'Social Media Growth', 'SEO/GEO/AEO', 'Creative Direction'].map((skill) => (
-              <span key={skill} className="px-3 py-1 bg-black/40 text-white font-bold text-xs rounded-lg border border-white/20 backdrop-blur-sm">
-                {skill}
-              </span>
-            ))}
+          <div id="skills" className="flex flex-col gap-3 pt-4 border-t border-white/20">
+            <div className="flex flex-wrap items-center gap-3">
+              {['Digital Marketing', 'Brand Strategy', 'Google Ads', 'Meta Ads', 'Shopify E-commerce', 'Social Media Growth', 'SEO/GEO/AEO', 'Creative Direction'].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-black/40 text-white font-bold text-xs rounded-lg border border-white/20 backdrop-blur-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            {/* Tech Stack Icons */}
+            <div className="flex items-center gap-3 mt-2">
+              <span className="text-xs font-bold text-black uppercase tracking-wider">Built With & Tech:</span>
+              <div className="flex items-center gap-3 bg-black/30 px-3 py-1 rounded-lg border border-white/20 backdrop-blur-sm">
+                <img src={reactImage} alt="React" className="w-5 h-5 object-contain" title="React" />
+                <img src={nodeImage} alt="Node.js" className="w-5 h-5 object-contain" title="Node.js" />
+                <img src={mongoImage} alt="MongoDB" className="w-5 h-5 object-contain" title="MongoDB" />
+              </div>
+            </div>
           </div>
 
         </div>

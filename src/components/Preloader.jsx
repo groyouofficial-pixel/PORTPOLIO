@@ -1,17 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Prevent scrolling during preloader animation
+    document.body.style.overflow = 'hidden';
+
     // Wait for the water fill animation (1.5s) + a small pause (0.5s)
     // before the shutter goes up smoothly.
     const timer = setTimeout(() => {
       setIsLoading(false);
+      document.body.style.overflow = '';
     }, 2200);
     
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = '';
+    };
   }, []);
 
   return (

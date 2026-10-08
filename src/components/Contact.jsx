@@ -1,9 +1,16 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Contact = () => {
   const ref = useRef(null);
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+    permission: false,
+  });
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -13,9 +20,24 @@ const Contact = () => {
   // Parallax translation for the big text
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "30%"]);
 
+  const handleChange = (e) => {
+    const { id, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: type === 'checkbox' ? checked : value
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: '',
+      permission: false,
+    });
     setTimeout(() => {
       setSubmitted(false);
     }, 4000);
@@ -80,6 +102,8 @@ const Contact = () => {
                       type="text" 
                       id="firstName" 
                       placeholder="First Name" 
+                      value={formData.firstName}
+                      onChange={handleChange}
                       required
                       className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                     />
@@ -89,6 +113,8 @@ const Contact = () => {
                       type="text" 
                       id="lastName" 
                       placeholder="Last Name" 
+                      value={formData.lastName}
+                      onChange={handleChange}
                       required
                       className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                     />
@@ -98,6 +124,8 @@ const Contact = () => {
                       type="email" 
                       id="email" 
                       placeholder="Email" 
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                     />
@@ -110,6 +138,8 @@ const Contact = () => {
                     <textarea 
                       id="message" 
                       placeholder="Type your message here" 
+                      value={formData.message}
+                      onChange={handleChange}
                       required
                       className="w-full h-full min-h-[120px] bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium resize-none rounded-none"
                     ></textarea>
@@ -124,6 +154,8 @@ const Contact = () => {
                   <input 
                     type="checkbox" 
                     id="permission" 
+                    checked={formData.permission}
+                    onChange={handleChange}
                     required
                     className="mt-1 w-4 h-4 rounded-sm border-white/40 bg-transparent text-white focus:ring-white focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer" 
                     style={{ accentColor: "white" }}
