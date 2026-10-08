@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// Corrected import path for the video
-import heroVideo from '../assets/hero video/Developer_introduces_self_and_sk._202606051918.mp4';
+// Import path for the custom hero video
+import heroVideo from '../assets/hero video/my_video.mp4';
 
 const Hero = () => {
   const videoRef = useRef(null);
