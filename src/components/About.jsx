@@ -40,31 +40,62 @@ const About = () => {
         {/* Right Side: Info Content */}
         <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-8 md:mt-0 relative z-20">
           
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Hello!</h2>
-          <p className="text-lg font-bold mb-12 leading-relaxed max-w-3xl text-red-50">
-            Hi, my name is <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Leeshark</span>, a passionate full-stack developer based in California, US, dedicated to crafting clean, functional, and highly scalable web applications.
+          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">About Me</h2>
+          <p className="text-lg font-bold mb-6 leading-relaxed max-w-3xl text-red-50">
+            Hi, I'm <span className="text-black text-xl font-black mx-1 tracking-wide uppercase bg-white/20 px-2 py-0.5 rounded">SUJITH THANGAVEL</span>, a Digital Marketing & Brand Manager. I don't just manage social media — I combine <strong>Marketing + Branding + Creativity + Technology + Business Growth</strong> to build and scale brands.
           </p>
 
-          {/* Horizontal Skills Row (Transparent & Large) */}
-          <div id="skills" className="flex items-center gap-10 mt-8">
-            <img 
-              data-aos="zoom-in" data-aos-delay="300"
-              src={reactImage} 
-              alt="React" 
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
-            />
-            <img 
-              data-aos="zoom-in" data-aos-delay="450"
-              src={nodeImage} 
-              alt="Node.js" 
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
-            />
-            <img 
-              data-aos="zoom-in" data-aos-delay="600"
-              src={mongoImage} 
-              alt="MongoDB" 
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
-            />
+          <p className="text-base font-semibold mb-8 text-black/90 bg-white/90 p-4 rounded-xl shadow-lg border border-black/10">
+            🎯 <strong>Core Flow:</strong> Strategy → Content → Website → Advertising → Leads → E-commerce → Scale
+          </p>
+
+          {/* Key Statistics Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+            <div className="bg-black/30 backdrop-blur-md p-4 rounded-xl border border-white/20 text-center">
+              <div className="text-2xl md:text-3xl font-black text-white">7+</div>
+              <div className="text-xs text-red-100 font-bold uppercase tracking-wider mt-1">Years Exp</div>
+            </div>
+            <div className="bg-black/30 backdrop-blur-md p-4 rounded-xl border border-white/20 text-center">
+              <div className="text-2xl md:text-3xl font-black text-white">100M+</div>
+              <div className="text-xs text-red-100 font-bold uppercase tracking-wider mt-1">Views</div>
+            </div>
+            <div className="bg-black/30 backdrop-blur-md p-4 rounded-xl border border-white/20 text-center">
+              <div className="text-2xl md:text-3xl font-black text-white">2Cr+</div>
+              <div className="text-xs text-red-100 font-bold uppercase tracking-wider mt-1">Leads</div>
+            </div>
+            <div className="bg-black/30 backdrop-blur-md p-4 rounded-xl border border-white/20 text-center">
+              <div className="text-2xl md:text-3xl font-black text-white">Multi</div>
+              <div className="text-xs text-red-100 font-bold uppercase tracking-wider mt-1">Industry</div>
+            </div>
+          </div>
+
+          {/* Career Journey Timeline */}
+          <div className="mb-8">
+            <h3 className="text-xl font-black text-black uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span>🚀</span> Career Journey (2019 — 2026)
+            </h3>
+            <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm font-bold text-black">
+              <span className="bg-white/90 px-3 py-1.5 rounded-full shadow-sm">Kalimar News</span>
+              <span>→</span>
+              <span className="bg-white/90 px-3 py-1.5 rounded-full shadow-sm">News Tamil 24x7</span>
+              <span>→</span>
+              <span className="bg-white/90 px-3 py-1.5 rounded-full shadow-sm">Jaya TV</span>
+              <span>→</span>
+              <span className="bg-white/90 px-3 py-1.5 rounded-full shadow-sm">Aditya Music</span>
+              <span>→</span>
+              <span className="bg-white/90 px-3 py-1.5 rounded-full shadow-sm">OrangeSmith</span>
+              <span>→</span>
+              <span className="bg-black text-white px-3 py-1.5 rounded-full shadow-md">4D Motion Pictures</span>
+            </div>
+          </div>
+
+          {/* Horizontal Skills Badges */}
+          <div id="skills" className="flex flex-wrap items-center gap-3 pt-4 border-t border-white/20">
+            {['Digital Marketing', 'Brand Strategy', 'Google Ads', 'Meta Ads', 'Shopify E-commerce', 'Social Media Growth', 'SEO/GEO/AEO', 'Creative Direction'].map((skill) => (
+              <span key={skill} className="px-3 py-1 bg-black/40 text-white font-bold text-xs rounded-lg border border-white/20 backdrop-blur-sm">
+                {skill}
+              </span>
+            ))}
           </div>
 
         </div>

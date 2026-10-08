@@ -82,21 +82,33 @@ const Services = () => {
       <div className="max-w-6xl mx-auto relative md:h-[1350px]">
         
         {/* Header Content */}
-        <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
-          <div className="inline-block border border-gray-300 rounded-full px-5 py-1.5 text-sm text-gray-600 font-bold mb-8 shadow-sm bg-white">
-            How we work
+        <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[480px] z-20 mb-16 md:mb-0">
+          <div className="inline-block border border-gray-300 rounded-full px-5 py-1.5 text-sm text-gray-600 font-bold mb-6 shadow-sm bg-white">
+            What I Do & How I Deliver
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tight relative">
-            Let us show you how we drive your brand to new heights
+            Driving Your Brand To New Heights Through Strategy & Performance
             {/* Hand-drawn arrow */}
             <svg className="absolute -bottom-10 right-10 w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" className="hidden" />
               <path d="M4 4 Q 10 10 15 15 M 15 15 L 10 15 M 15 15 L 15 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </h2>
-          <p className="text-gray-500 text-base md:text-lg max-w-sm font-medium leading-relaxed">
-            We follow a structured, creative, and highly technical approach to turn your ideas into robust full-stack applications.
+          <p className="text-gray-500 text-base md:text-lg max-w-md font-medium leading-relaxed mb-6">
+            Combining <strong>Marketing + Branding + Technology + Performance Ads</strong> to turn content into engagement and visitors into high-value leads.
           </p>
+
+          {/* Brands Worked With Showcase */}
+          <div className="bg-gray-50 p-5 rounded-2xl border border-gray-200 shadow-sm max-w-md">
+            <div className="text-xs font-black uppercase text-gray-400 tracking-wider mb-3">Featured Brands & Clients</div>
+            <div className="flex flex-wrap gap-2 text-xs font-bold text-gray-700">
+              {['Simran', 'Original Version', 'OrangeSmith', 'Aditya Music', 'Jaya TV', 'News Tamil 24x7', 'DigiForce', '4D Motion Pictures'].map((brand) => (
+                <span key={brand} className="bg-white px-2.5 py-1 rounded-md border border-gray-200 shadow-2xs">
+                  {brand}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Desktop SVG Animated Dashed Line */}
@@ -177,8 +189,8 @@ const Services = () => {
           
           <TagCard 
             number="01"
-            title="Define"
-            text="We start by understanding your goals, user requirements, and technical constraints to lay a rock-solid foundation for the project."
+            title="Strategy"
+            text="Brand positioning, digital marketing consulting, market analysis, and channel mapping to establish market dominance."
             className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
             aosType="fade-left"
             aosDelay="100"
@@ -188,8 +200,8 @@ const Services = () => {
 
           <TagCard 
             number="02"
-            title="Design"
-            text="Creating intuitive, pixel-perfect user interfaces and wireframes that guarantee an engaging and accessible user experience."
+            title="Content"
+            text="Creative direction, video production, viral reels, and creator campaigns driving 100M+ views across social platforms."
             className="md:absolute md:top-[450px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6"
             aosType="fade-right"
             aosDelay="200"
@@ -199,8 +211,8 @@ const Services = () => {
 
           <TagCard 
             number="03"
-            title="Build"
-            text="Developing scalable frontend architectures and secure backend systems using the latest modern tech stack."
+            title="Web & E-com"
+            text="Shopify e-commerce development, high-converting landing pages, WordPress, and SEO / GEO / AEO search visibility."
             className="md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
             aosType="fade-left"
             aosDelay="300"
@@ -210,8 +222,8 @@ const Services = () => {
 
           <TagCard 
             number="04"
-            title="Launch"
-            text="Rigorous testing, optimization, and seamless deployment to cloud infrastructure, followed by ongoing support."
+            title="Performance"
+            text="High-ROI Meta & Google Ads, lead generation scaling past 2Cr+ leads, marketplace ad strategy (Amazon, Flipkart)."
             className="md:absolute md:top-[1050px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
             aosType="fade-right"
             aosDelay="400"
@@ -225,7 +237,7 @@ const Services = () => {
             data-aos-delay="600"
             className="hidden md:block absolute top-[1250px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
-            Ready to be delivered!
+            Ready to scale your brand!
           </div>
 
         </div>

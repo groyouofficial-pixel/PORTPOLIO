@@ -50,21 +50,27 @@ const Hero = () => {
         
         {/* Left Side: Text and Buttons */}
         <div className="flex flex-col items-start text-left max-w-2xl w-full">
+          {/* Tag Pill */}
+          <div data-aos="fade-down" className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-red-400 font-bold text-xs md:text-sm mb-4">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            Building Brands • Growing Audiences • Driving Business
+          </div>
+
           {/* Main Heading */}
           <h1 
             data-aos="fade-up"
-            className="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight"
+            className="text-white text-3xl md:text-5xl font-black mb-4 tracking-tight leading-tight"
           >
-            Hi, I’m a <br /> <span className="text-transparent [-webkit-text-stroke:1.5px_white]">Full Stack Developer</span>
+            Hi, I’m Sujith Thangavel <br /> <span className="text-transparent [-webkit-text-stroke:1.5px_white]">Brand & Digital Lead</span>
           </h1>
 
           {/* Subheading */}
           <p 
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-white text-sm md:text-lg font-semibold mb-8 max-w-md drop-shadow-md"
+            className="text-white/90 text-sm md:text-base font-medium mb-6 max-w-lg drop-shadow-md leading-relaxed"
           >
-            I build fast, scalable and modern web applications using React, Node.js and Tailwind CSS.
+            7+ Years of driving multi-industry brand growth with <strong>100M+ Views</strong> & <strong>2Cr+ Performance Leads</strong> across Meta, Google Ads & Social Ecosystems.
           </p>
 
           {/* Buttons */}

@@ -42,8 +42,18 @@ const Contact = () => {
           data-aos="fade-up"
           className="bg-[#ff2a2a] w-full md:w-[85%] lg:w-[75%] p-8 md:p-16 text-white flex flex-col justify-between min-h-[450px]"
         >
-          <div className="text-xs font-bold tracking-[0.2em] mb-12 md:mb-20 uppercase opacity-90">
-            Reach Us
+          <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-12 md:mb-16 border-b border-white/20 pb-8">
+            <div>
+              <div className="text-xs font-black tracking-[0.2em] uppercase opacity-90 text-black bg-white/90 px-3 py-1 rounded inline-block mb-3">
+                Have a Brand?
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
+                Let's Build Something That Grows.
+              </h2>
+            </div>
+            <p className="text-xs md:text-sm font-bold text-white/90 max-w-md leading-relaxed border-l-2 border-white/40 pl-4">
+              "Content should attract. Branding should connect. Marketing should convert. Technology should scale."
+            </p>
           </div>
 
           {submitted ? (
