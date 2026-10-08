@@ -77,6 +77,8 @@ const Services = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
+      <div id="projects" className="absolute -top-24"></div>
+      <div id="work" className="absolute -top-24"></div>
       <div className="max-w-6xl mx-auto relative md:h-[1350px]">
         
         {/* Header Content */}
